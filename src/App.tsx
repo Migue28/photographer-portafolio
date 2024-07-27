@@ -1,17 +1,15 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import PhotoCard from "./components/PhotoCard";
-
+import PhotoGallery from "./components/PhotoGallery";
 import { city, woman, mountain, forest } from "./assets/images/index";
+
+const photoSource = [city, woman, mountain, forest, forest, mountain, woman, city]
 
 function App() {
   return (
     <>
       <Navbar name="SKYLA RANGER" />
-      <PhotoCard source={city} />
-      <PhotoCard source={woman} />
-      <PhotoCard source={mountain} />
-      <PhotoCard source={forest} />
+      <PhotoGallery photoSource={photoSource} />
     </>
   );
 }
