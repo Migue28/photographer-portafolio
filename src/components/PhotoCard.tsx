@@ -4,7 +4,7 @@ type PhotoCardProps = {
 
 const PhotoCard = ({ source }: PhotoCardProps) => {
   return (
-    <div className="sm:w-40 sm:h-40 md:w-72 md:h-72 2xl:w-96 xl:h-96">
+    <div className="w-full">
       <img className="object-cover aspect-square w-fit" src={source} alt={source} />
     </div>
   );
