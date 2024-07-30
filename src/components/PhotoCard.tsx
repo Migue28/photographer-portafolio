@@ -1,11 +1,16 @@
-type PhotoCardProps = {
-  source: string
-}
+import { Photo } from '@src/types/photo'
 
-const PhotoCard = ({ source }: PhotoCardProps) => {
+const PhotoCard = (photo: Photo) => {
+  const { download_url, author, id } = photo
+
   return (
     <div className='w-full'>
-      <img className='object-cover aspect-square w-fit' src={source} alt={source} />
+      <img
+        className='object-cover aspect-square w-fit'
+        src={download_url}
+        alt={`${author} photo ${id}`}
+        id={id}
+      />
     </div>
   )
 }
