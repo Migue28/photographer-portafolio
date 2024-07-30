@@ -4,7 +4,7 @@ type NavbarProps = {
 
 const Navbar = ({ name }: NavbarProps) => {
   return (
-    <header className='flex justify-center items-center'>
+    <header className='flex justify-center items-center sticky top-0 z-50 bg-white'>
       <div className='w-full max-w-[1440px] grid grid-cols-8'>
         <div className='col-start-2 col-span-6 pt-6'>
           <section className='flex sticky font-mono justify-between w-full items-center'>
