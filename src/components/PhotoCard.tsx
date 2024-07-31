@@ -4,7 +4,7 @@ const PhotoCard = (photo: Photo) => {
   const { download_url, author, id } = photo
 
   return (
-    <div className='w-full' key={id}>
+    <div className='w-full'>
       <img
         className='object-cover aspect-square w-fit'
         src={download_url}
