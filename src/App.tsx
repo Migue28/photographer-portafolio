@@ -1,17 +1,15 @@
-import "./App.css";
-import Navbar from "./components/Navbar";
-import PhotoGallery from "./components/PhotoGallery";
-import { city, woman, mountain, forest } from "./assets/images/index";
-
-const photoSource = [city, woman, mountain, forest, forest, mountain, woman, city]
+import './App.css'
+import PhotoGallery from './components/PhotoGallery'
+import DefaultLayout from './layouts/default'
 
 function App() {
   return (
     <>
-      <Navbar name="SKYLA RANGER" />
-      <PhotoGallery photoSource={photoSource} />
+      <DefaultLayout>
+        <PhotoGallery />
+      </DefaultLayout>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
