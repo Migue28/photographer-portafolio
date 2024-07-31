@@ -10,7 +10,7 @@ const PHOTO_API_URL = import.meta.env.VITE_PHOTO_API_URL
 
 const PhotoGallery = () => {
   const [photos, setPhotos] = useState<Photo[] | []>([])
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const getPhoto = async () => {
     setLoading(true)
     try {
@@ -18,30 +18,24 @@ const PhotoGallery = () => {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': 'origin',
-          'Access-Control-Allow-Headers': 'origin',
         },
       })
 
       if (response.ok) {
         const data: Photo[] = await response.json()
-        console.log(data)
         setPhotos(data)
       }
     } catch (error) {
       console.error(error)
       toast.error('An error occurred while getting the photos')
-    }
-    if (photos.length) {
+    } finally {
       setLoading(false)
     }
   }
 
   useEffect(() => {
     getPhoto()
-  })
-
-  console.dir(photos)
+  }, [])
 
   return (
     <div className='grid gap-4 grid-cols-4'>
