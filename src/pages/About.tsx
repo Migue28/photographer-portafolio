@@ -1,11 +1,5 @@
-import DefaultLayout from '@src/layouts/default'
-
 const About = () => {
-  return (
-    <DefaultLayout>
-      <></>
-    </DefaultLayout>
-  )
+  return <h1>About Me</h1>
 }
 
 export default About
