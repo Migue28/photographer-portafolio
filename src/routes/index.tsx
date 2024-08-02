@@ -6,9 +6,7 @@ function Root() {
   return (
     <>
       <DefaultLayout>
-        <main>
-          <Outlet />
-        </main>
+        <Outlet />
       </DefaultLayout>
     </>
   )
