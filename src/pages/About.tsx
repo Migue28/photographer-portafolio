@@ -1,5 +1,11 @@
+import DefaultLayout from '@src/layouts/default'
+
 const About = () => {
-  return <></>
+  return (
+    <DefaultLayout>
+      <></>
+    </DefaultLayout>
+  )
 }
 
 export default About
